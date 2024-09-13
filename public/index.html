@@ -6,13 +6,42 @@
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Flux Runner 🏃‍♂️‍➡️</p>
+  <h1>Welcome to Flux Runner 🏃‍♂️‍➡️</h1>
 </body>
 
 <form action="/upload" method="post" enctype="multipart/form-data">
   <input type="file" name="file"/>
   <input type="submit" value="Upload File"/>
 </form>
+
+<form action="/run-flux" method="post">
+  <input type="text" name="namespace" value="namespace"/>
+  <input type="text" name="path" value="deployment"/>
+  <input type="submit" value="Run Flux"/>
+</form>
+
+<a href="/download" target="_blank" class="button">Download</a>
+
+<!--<script>-->
+
+<!--  const button = document.getElementById('downloadButton');-->
+
+<!--  button.addEventListener('click', function(e) {-->
+<!--    console.log('button was clicked');-->
+
+<!--    fetch('/download', {method: 'GET'})-->
+<!--      .then(function(response) {-->
+<!--        if(response.ok) {-->
+<!--          console.log('Click was recorded');-->
+<!--          return;-->
+<!--        }-->
+<!--        throw new Error('Request failed.');-->
+<!--      })-->
+<!--      .catch(function(error) {-->
+<!--        console.log(error);-->
+<!--      });-->
+<!--  });-->
+
+<!--</script>-->
 
 </html>
